@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "install": {
     "path": {
-      "js": "app/assets/libs",
-      "css": "app/assets/css"
+      "js": "src/app/assets/libs",
+      "css": "src/app/assets/css"
     }
   },
   "dependencies": {
@@ -22,7 +22,24 @@
     "angular-touch": ">=1.3.*",
     "angular-sanitize": ">=1.3.*",
     "angular-ui-router": "~0.2.10",
-    "angular-bootstrap": "~0.14.3"
+    "angular-bootstrap": "~0.14.3",
+    "lodash": "^4.11.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.min.css",
+        "lib/bootstrap/less/bootstrap.less"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "less/font-awesome.less",
+        "css/font-awesome.min.css",
+        "scss/font-awesome.scss"
+      ]
+    }
   },
   "resolutions": {
     "angular": ">=1.3.*"
@@ -42,6 +59,7 @@
     "node_modules",
     "bower_components",
     "src/bower_components",
+      "src/app/lib",
     "test",
     "tests"
   ]
