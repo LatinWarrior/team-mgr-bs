@@ -1,0 +1,9 @@
+{
+  "generator-angm": {
+    "appName": "team-mgr-bs",
+    "angularCookies": true,
+    "angularAnimate": true,
+    "angularSanitize": true,
+    "angularBootstrap": true
+  }
+}
