@@ -1,5 +1,5 @@
 {
-  "name": "team-mgr-bs",
+  "name": "eliteAdmin",
   "description": "Modular AngularJS with Angm-generator",
   "version": "0.0.1",
   "author": "Luis Blanco",
@@ -51,7 +51,7 @@
     "jshint-stylish": "^1.0.0",
     "opn": "^1.0.0"
   },
-  "main": "src/app/app.js",
+  "main": "src/app/app.config.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LatinWarrior/team-mgr-bs.git"
