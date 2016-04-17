@@ -14,7 +14,7 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="app/assets/images/apple-touch-icon-72x72.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="app/assets/images/apple-touch-icon-114x114.png" />
 	<!-- injector:css -->
-	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.united.min.css">
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endinjector -->
 </head>
@@ -50,19 +50,31 @@
 <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
-<!-- injector:js -->  
+<!-- inject:js -->
 <script src="app/app.module.js"></script>
-<script src="app/app.config.js"></script>
-<script src="app/directives/spinner.directive.js"></script>
-<script src="app/home/home.controller.js"></script>
-<script src="app/layout/shell.controller.js"></script>
-<script src="app/games/games.controller.js"></script>
-<script src="app/league-home/league-home.controller.js"></script>
-<script src="app/leagues/leagues.controller.js"></script>
-<script src="app/services/app-spinner.service.js"></script>
+<script src="app/layouts/nav-bar/navbarService.js"></script>
+<script src="app/layouts/nav-bar/navbarDirective.js"></script>
+<script src="app/layouts/nav-bar/navBarCtrl.js"></script>
+<script src="app/teams/teams.controller.js"></script>
+<script src="app/shared/confirm-modal.controller.js"></script>
 <script src="app/services/elite-api.service.js"></script>
-<script src="app/teams/teams.controller.js"></script>  
-<!-- endinjector -->
+<script src="app/services/dialogs.service.js"></script>
+<script src="app/services/client.service.js"></script>
+<script src="app/services/app-spinner.service.js"></script>
+<script src="app/old-home/oldHomeModule.js"></script>
+<script src="app/old-home/oldHomeService.js"></script>
+<script src="app/old-home/oldHomeRoute.js"></script>
+<script src="app/old-home/oldHhomeCtrl.js"></script>
+<script src="app/old-home/old-home-test.js"></script>
+<script src="app/leagues/leagues.controller.js"></script>
+<script src="app/league-home/league-home.controller.js"></script>
+<script src="app/layout/shell.controller.js"></script>
+<script src="app/layout/league-shell.controller.js"></script>
+<script src="app/home/home.controller.js"></script>
+<script src="app/games/games.controller.js"></script>
+<script src="app/directives/spinner.directive.js"></script>
+<script src="app/app.config.js"></script>
+<!-- endinject -->
 
 </body>
 </html>

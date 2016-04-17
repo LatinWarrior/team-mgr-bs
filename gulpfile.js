@@ -1,6 +1,9 @@
 'use strict';
-var gulp = require('gulp');
-var plugins = require('gulp-load-plugins')();
+
+var gulp = require('gulp'),
+    plugins = require('gulp-load-plugins')(),
+    angularFileSort = require('gulp-angular-filesort'),
+    debug = require('gulp-debug');
 
 var paths = {
     appScripts: 'src/app/**/*.js'
@@ -28,11 +31,15 @@ gulp.task('watch', ['serve'], function () {
     gulp.watch(paths.appScripts, ['scripts']);
 });
 
-gulp.task('injectjs', function(){
+gulp.task('injectjs', function () {
     var target = gulp.src('./src/index.html');
     var sources = gulp.src([paths.appScripts]);
 
-    return target.pipe(plugins.inject(sources, {relative: true}))
+    return target
+        .pipe(debug())
+        .pipe(plugins.inject(sources.pipe(angularFileSort()), {
+            relative: true
+        }))        
         .pipe(gulp.dest('./src'));
 
 });
@@ -44,7 +51,9 @@ gulp.task('serve', ['connect'], function () {
 gulp.task('connect', function () {
     var connect = require('connect');
     var app = connect()
-        .use(require('connect-livereload')({ port: 35729 }))
+        .use(require('connect-livereload')({
+            port: 35729
+        }))
         .use(connect.static('src'))
         .use(connect.directory('src'));
 
